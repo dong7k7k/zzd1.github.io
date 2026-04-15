@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>实验任务2-数字展销平台-春韵</title>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/lab2-2503-117-index.css">
+</head>
+<body>
+    <!-- 1. 头部区域 (固定定位 + 浮动) -->
+    <header class="header">
+        <div class="logo">春韵·图书展销</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">新书推荐</a></li>
+                <li><a href="#">分类导航</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体容器 (防止内容被固定头部遮挡) -->
+    <div class="container">
+        
+        <!-- 2. 主体内容区 (浮动三栏布局) -->
+        <div class="main-wrapper">
+            
+            <!-- 左栏：分类导航 (相对定位) -->
+            <aside class="sidebar-left">
+                <h3>图书分类</h3>
+                <ul>
+                    <li><a href="#">文学小说</a></li>
+                    <li><a href="#">科技编程</a></li>
+                    <li><a href="#">历史社科</a></li>
+                    <li><a href="#">教育教辅</a></li>
+                </ul>
+                <!-- 演示相对定位：内部小标签偏移 -->
+                <span class="hot-tag" style="top: 10px; left: 10px;">热卖</span>
+            </aside>
+
+            <!-- 中栏：核心内容区 -->
+            <main class="content-center">
+                <!-- 热门推荐 (浮动排列) -->
+                <section class="hot-recommend">
+                    <h3>热门推荐</h3>
+                    <div class="book-list">
+                        <!-- 图书卡片1：包含鼠标悬停效果 -->
+                        <div class="book-card">
+                            <img src="book1.jpg" alt="编程书">
+                            <p>现代C语言教程</p>
+                            <!-- 悬停显示的隐藏层 -->
+                            <div class="book-hover">立即抢购</div>
+                        </div>
+                        <div class="book-card">
+                            <img src="book2.jpg" alt="物理书">
+                            <p>大学物理精讲</p>
+                            <div class="book-hover">立即抢购</div>
+                        </div>
+                        <div class="book-card">
+                            <img src="book3.jpg" alt="数学书">
+                            <p>高等数学全解</p>
+                            <div class="book-hover">立即抢购</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 新书上市 (Table布局) -->
+                <section class="new-book">
+                    <h3>新书上市</h3>
+                    <table border="1" cellpadding="8" cellspacing="0">
+                        <tr>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>价格</th>
+                        </tr>
+                        <tr>
+                            <td>HTML5实战</td>
+                            <td>张三</td>
+                            <td>¥49.00</td>
+                        </tr>
+                        <tr>
+                            <td>CSS进阶</td>
+                            <td>李四</td>
+                            <td>¥59.00</td>
+                        </tr>
+                    </table>
+                </section>
+            </main>
+
+            <!-- 右栏：促销广告 (固定定位) -->
+            <aside class="sidebar-right">
+                <img src="ad.jpg" alt="促销广告">
+                <p>全场满减</p>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2026 春韵数字展销平台 - 计算机科学与技术</p>
+    </footer>
+</body>
+</html>
